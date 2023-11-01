@@ -154,7 +154,7 @@ func (s *S3Store) initOnce() error {
 	sess, err := session.NewSession(&aws.Config{
 		Credentials: credentials.NewStaticCredentials(s.awsID, s.awsSecret, ""),
 		Region:      aws.String(s.region),
-		Endpoint:    aws.String("https://s3.wasabisys.com"),
+		Endpoint:    aws.String("https://s3.madiator.cloud"),
 	})
 	if err != nil {
 		return err
